@@ -1,6 +1,6 @@
 [package]
 name = "fel4-config"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["Zachary Pierce <zpierce@polysync.io>", "Jon Lamb <jlamb@polysync.io>"]
 
 [dependencies]
@@ -10,6 +10,6 @@ multimap = { version = "0.4", default-features = false }
 toml = "0.4"
 
 [dev-dependencies]
-proptest = "0.7"
+proptest = "0.8.5"
 tempfile = "3"
 
