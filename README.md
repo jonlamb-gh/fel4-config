@@ -6,11 +6,11 @@ Parsing, transformation and validation for feL4 manifests.
 
 The primary purpose of this library is to parse and validate [fel4.toml](examples/exemplar.toml)
 files, which contain configuration options relevant to building seL4
-with the help of the [cargo-fel4](https://github.com/PolySync/cargo-fel4) tool.
+with the help of the [cargo-fel4](https://github.com/maindotrs/cargo-fel4) tool.
 
 The secondary purpose of this library is to actually assist in applying these
 configuration values to the CMake based build process of seL4, as encapsulated
-by the [libsel4-sys](https://github.com/PolySync/libsel4-sys) repository.
+by the [libsel4-sys](https://github.com/maindotrs/libsel4-sys) repository.
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ by the [libsel4-sys](https://github.com/PolySync/libsel4-sys) repository.
 * Retrieve the repository from git:
   
   ```bash
-  git clone git@github.com:PolySync/fel4-config.git
+  git clone https://github.com/maindotrs/fel4-config.git
   cd fel4-config
   ```
 * Build using cargo
@@ -43,7 +43,7 @@ to your Cargo.toml.
 * In your relevant `[dependencies]` section:
   
   ```
-  fel4-config = { git = "https://github.com/PolySync/fel4-config.git", branch = "master" }
+  fel4-config = "0.3"
   ```
 
 ## Usage
@@ -159,7 +159,7 @@ cargo test
 
 © 2018, PolySync Technologies, Inc.
 
-* Zack Pierce [email](mailto:zpierce@polysync.io)
-* Jon Lamb [email](mailto:jlamb@polysync.io)
+* Zack Pierce [email](mailto:zachary.pierce@gmail.com)
+* Jon Lamb [email](mailto:lamb.jon.io@gmail.com)
 
 Please see the [LICENSE](./LICENSE) file for more details
