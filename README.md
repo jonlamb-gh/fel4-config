@@ -157,9 +157,4 @@ cargo test
 
 # License
 
-© 2018, PolySync Technologies, Inc.
-
-* Zack Pierce [email](mailto:zachary.pierce@gmail.com)
-* Jon Lamb [email](mailto:lamb.jon.io@gmail.com)
-
 Please see the [LICENSE](./LICENSE) file for more details
