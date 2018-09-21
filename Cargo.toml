@@ -5,6 +5,7 @@ authors = ["Zachary Pierce <zachary.pierce@gmail.com>", "Jon Lamb <lamb.jon.io@g
 description = "Parsing, transformation and validation for feL4 manifests"
 repository = "https://github.com/maindotrs/fel4-config"
 homepage = "https://github.com/maindotrs/fel4-config"
+license-file = "LICENSE"
 
 [dependencies]
 cmake = "0.1"
