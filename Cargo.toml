@@ -1,11 +1,12 @@
 [package]
 name = "fel4-config"
-version = "0.3.1"
+version = "0.3.2"
 authors = ["Zachary Pierce <zachary.pierce@gmail.com>", "Jon Lamb <lamb.jon.io@gmail.com>"]
 description = "Parsing, transformation and validation for feL4 manifests"
 repository = "https://github.com/maindotrs/fel4-config"
 homepage = "https://github.com/maindotrs/fel4-config"
 license-file = "LICENSE"
+readme = "README.md"
 
 [dependencies]
 cmake = "0.1"
