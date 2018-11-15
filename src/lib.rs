@@ -58,7 +58,8 @@ pub fn is_supported_target_platform_pair(
     match (target, platform) {
         (SupportedTarget::X8664Sel4Fel4, SupportedPlatform::PC99)
         | (SupportedTarget::Armv7Sel4Fel4, SupportedPlatform::Sabre)
-        | (SupportedTarget::Aarch64Sel4Fel4, SupportedPlatform::Tx1) => true,
+        | (SupportedTarget::Aarch64Sel4Fel4, SupportedPlatform::Tx1)
+        | (SupportedTarget::Aarch64Sel4Fel4, SupportedPlatform::Rpi3) => true,
         _ => false,
     }
 }

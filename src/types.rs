@@ -104,11 +104,13 @@ pub enum SupportedPlatform {
     PC99,
     Sabre,
     Tx1,
+    Rpi3,
 }
 
 const PLATFORM_PC99: &str = "pc99";
 const PLATFORM_SABRE: &str = "sabre";
 const PLATFORM_TX1: &str = "tx1";
+const PLATFORM_RPI3: &str = "rpi3";
 
 impl SupportedPlatform {
     pub fn full_name(&self) -> &'static str {
@@ -116,6 +118,7 @@ impl SupportedPlatform {
             SupportedPlatform::PC99 => PLATFORM_PC99,
             SupportedPlatform::Sabre => PLATFORM_SABRE,
             SupportedPlatform::Tx1 => PLATFORM_TX1,
+            SupportedPlatform::Rpi3 => PLATFORM_RPI3,
         }
     }
 
@@ -124,6 +127,7 @@ impl SupportedPlatform {
             SupportedPlatform::PC99,
             SupportedPlatform::Sabre,
             SupportedPlatform::Tx1,
+            SupportedPlatform::Rpi3,
         ]
     }
 
@@ -149,6 +153,7 @@ impl FromStr for SupportedPlatform {
             PLATFORM_PC99 => Ok(SupportedPlatform::PC99),
             PLATFORM_SABRE => Ok(SupportedPlatform::Sabre),
             PLATFORM_TX1 => Ok(SupportedPlatform::Tx1),
+            PLATFORM_RPI3 => Ok(SupportedPlatform::Rpi3),
             _ => Err(s.to_string()),
         }
     }
