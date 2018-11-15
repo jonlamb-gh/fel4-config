@@ -2,7 +2,6 @@ use cmake::Config as CmakeConfig;
 use std::collections::HashMap;
 /// Utilities for configuring the sel4_kernel CMake build based
 /// on fel4 configuration data
-///
 use std::env;
 use std::path::Path;
 use types::*;

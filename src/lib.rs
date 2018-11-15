@@ -28,24 +28,49 @@ pub enum ConfigError {
     FileReadFailure,
     #[fail(display = "The fel4 manifest file is unparseable as toml")]
     TomlParseFailure,
-    #[fail(display = "The fel4 manifest file is missing the {} table", _0)]
+    #[fail(
+        display = "The fel4 manifest file is missing the {} table",
+        _0
+    )]
     MissingTable(String),
-    #[fail(display = "The fel4 manifest file contained an unexpected table or array {}", _0)]
+    #[fail(
+        display = "The fel4 manifest file contained an unexpected table or array {}",
+        _0
+    )]
     UnexpectedStructure(String),
-    #[fail(display = "The [{}] table requires the {} property, but it is absent.", _0, _1)]
+    #[fail(
+        display = "The [{}] table requires the {} property, but it is absent.",
+        _0,
+        _1
+    )]
     MissingRequiredProperty(String, String),
-    #[fail(display = "The {} property should be specified as a string, but is not", _0)]
+    #[fail(
+        display = "The {} property should be specified as a string, but is not",
+        _0
+    )]
     NonStringProperty(&'static str),
-    #[fail(display = "The {} property should be one of {:?}, but is instead {}", _0, _1, _2)]
+    #[fail(
+        display = "The {} property should be one of {:?}, but is instead {}",
+        _0,
+        _1,
+        _2
+    )]
     InvalidValueOption(&'static str, Vec<String>, String),
     #[fail(
         display = "The fel4 manifest had a duplicate property {} when resolved to a canonical set",
         _0
     )]
     DuplicateProperty(String),
-    #[fail(display = "The {} property was supplied, but is not on the permitted whitelist", _0)]
+    #[fail(
+        display = "The {} property was supplied, but is not on the permitted whitelist",
+        _0
+    )]
     NonWhitelistProperty(String),
-    #[fail(display = "The {} target is not a supported combination with the {} platform", _0, _1)]
+    #[fail(
+        display = "The {} target is not a supported combination with the {} platform",
+        _0,
+        _1
+    )]
     TargetPlatformMismatch(SupportedTarget, SupportedPlatform),
 }
 

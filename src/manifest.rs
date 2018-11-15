@@ -89,8 +89,7 @@ fn parse_fel4_header(raw: &toml::Value) -> Result<Fel4Header, ConfigError> {
         .and_then(|o| {
             o.as_str()
                 .ok_or_else(|| ConfigError::NonStringProperty("artifact-path"))
-        })
-        .and_then(|s| {
+        }).and_then(|s| {
             if s.is_empty() {
                 Err(ConfigError::MissingRequiredProperty(
                     "fel4".into(),
@@ -99,18 +98,15 @@ fn parse_fel4_header(raw: &toml::Value) -> Result<Fel4Header, ConfigError> {
             } else {
                 Ok(s)
             }
-        })?
-        .to_string();
+        })?.to_string();
     let target_specs_path = fel4_table
         .get("target-specs-path")
         .ok_or_else(|| {
             ConfigError::MissingRequiredProperty("fel4".into(), "target-specs-path".into())
-        })
-        .and_then(|o| {
+        }).and_then(|o| {
             o.as_str()
                 .ok_or_else(|| ConfigError::NonStringProperty("target-specs-path"))
-        })
-        .and_then(|s| {
+        }).and_then(|s| {
             if s.is_empty() {
                 Err(ConfigError::MissingRequiredProperty(
                     "fel4".into(),
@@ -119,8 +115,7 @@ fn parse_fel4_header(raw: &toml::Value) -> Result<Fel4Header, ConfigError> {
             } else {
                 Ok(s)
             }
-        })?
-        .to_string();
+        })?.to_string();
     Ok(Fel4Header {
         artifact_path,
         target_specs_path,
