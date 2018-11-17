@@ -252,6 +252,8 @@ const ALL_PROPERTIES_WHITELIST: &[&str] = &[
     "KernelArmEnableA9Prefetcher",
     "KernelArmExportPMUUser",
     "KernelDebugDisableL2Cache",
+    "KernelDebugDisableL1DCache",
+    "KernelDebugDisableL1ICache",
 ];
 /// Things that can go wrong when trying to rely on environment variables
 /// to locate the fel4 manifest and its parameterization.
